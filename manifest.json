@@ -1,0 +1,13 @@
+{
+  "name": "GPS Tracker",
+  "description": "Display geolocation information received over a serial connection.",
+  "version": "0.1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "sandbox": {"pages": ["map.html"]},
+  "icons": { "16": "globe-16.png", "128": "globe-128.png" },
+  "permissions": ["serial"]
+}
