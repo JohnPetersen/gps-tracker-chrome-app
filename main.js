@@ -177,6 +177,12 @@ function GpsTracker(connId) {
 onload = function() {
   'use strict';
 
+  /* On resize adjust data table to keep it on screen. */
+  $(window).resize(function() {
+    $('#dataPanel').height($(window).height() -
+      ($('#controlPanel').outerHeight(true) + $('#controlPanel').offset().top));
+  });
+
   /* Get a list of serial ports and populate the select element with them. */
   chrome.serial.getPorts(function(ports) {
     var dd = $('#portDropdown');
